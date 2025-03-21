@@ -1,0 +1,353 @@
+/* Reset */
+/* #region global */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Stretch';
+    src: url('../fonts/StretchPro.otf');
+}
+
+:root {
+    --clr-primaria: #00A3FF;
+    /* --background-azul: background: rgb(23,102,147); background: linear-gradient(90deg, rgba(23,102,147,1) 0%, rgba(0,212,255,0) 100%); */
+    /* bacground-preto: background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%); */
+    --clr-branca: white;
+    --clr-preta: rgb(5, 5, 5);
+    --clr-tranparent: transparent;
+    --btn-radius: 40px;
+}
+
+
+h2 {
+    font-family: 'Stretch';
+
+    i {
+        color: #00A3FF;
+    }
+
+}
+
+.btn-contrate {
+    background: var(--clr-primaria);
+    color: var(--clr-branca);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+h1 {
+    font-family: 'Stretch';
+    /* font-size: 50px; */
+}
+
+/* #endregion */
+
+/* #region TopNav */
+header {
+    /* From https://css.glass */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.603);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & a{
+        img {
+            height: 100px;
+        }
+
+    } 
+
+    & ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        color: var(--clr-branca);
+        font-family: 'Stretch';
+        text-transform: uppercase;
+
+    
+            & li {
+                padding: 20px;
+                & a{
+                    color: white;
+                }
+            }
+        
+    }
+}
+
+/* #endregion */
+
+/* #region Banner */
+video {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#background-degrade {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 90%);
+    height: 100%;
+    width: 100%;
+}
+
+section.banner {
+    color: var(--clr-branca);
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-around;
+
+
+        & .saibaMaisBanner {
+            background: var(--clr-primaria);
+            color: var(--clr-preta);
+            width: 200px;
+            height: 50px;
+            border-radius: var(--btn-radius);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid gray;
+            background: var(--clr-tranparent);
+            color: var(--clr-branca);
+        }
+
+        & .btn-contrate {
+            height: 100px;
+            width: 250px;
+            display: flex;
+            font-size: 20px;
+            color: var(--clr-branca);
+            font-family: 'Stretch';
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border-radius: var(--btn-radius);
+        }
+
+        & ul.carrosel {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+
+            .itensExemplo {
+                height: 50px;
+                width: 200px;
+                background: rgba(255, 255, 255, 0);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.5px);
+                -webkit-backdrop-filter: blur(9.5px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* #endregion */
+/* #region sobreNós 1 */
+section.sobreNos-1 {
+    height: 80dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    img {
+        height: 400px;
+        
+    }
+
+}
+/* #endregion */
+/* #region Sobre nós2 */
+
+.sobreNos-2{
+    height: 100dvh;
+    background-image: url(../img/sobrenos-2.jpg);
+    background-size: cover;
+    & img{
+        position: absolute;
+        color: var(--clr-branca);
+        text-transform: uppercase;
+        width: 100%;
+        margin-top: -20px;
+    }    
+    
+    & .sobrenos-2-center{
+        background: rgb(23,102,147); background: linear-gradient(90deg, rgba(23,102,147,1) 0%, rgba(0,212,255,0) 100%);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        & div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            p{
+                color: var(--clr-branca);
+            }
+            .saibaMaisBanner{
+                background: var(--clr-primaria);
+                color: var(--clr-preta);
+                width: 200px;
+                height: 50px;
+                border-radius: var(--btn-radius);
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-around;
+                border: 1px solid var(--clr-branca);
+                background: var(--clr-tranparent);
+                color: var(--clr-branca);
+                margin-left: 0px;
+            }
+        }
+        
+    }
+}
+
+/* #endregion */
+
+section.funcionarios{
+    height: 100dvh;
+    background: var(--clr-primaria);
+}
+
+section.servicos{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .partes{
+        flex-wrap: wrap;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        align-items: self-end;
+        height: auto;
+        width: 100%;
+        .card{
+            box-shadow: 0 0 50px var(--clr-preta);
+            border: 0px transparent;
+            background: var(--clr-primaria);
+            color: white;
+            .card-header{
+                border: 0px transparent;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon-servicos{
+                    height: 100px;
+                }
+                .card-title{
+                    border: 0;
+                    text-align: center;
+                }
+            }
+        }
+       
+    }
+}   
+
+    /* #region media */
+@media (max-width:1024px) {
+    header {
+        /* justify-content: ; */
+
+        ul {
+            display: none;
+        }
+
+        .btn-contrate {
+            display: none;
+        }
+    }
+
+    section.sobreNos-1{
+        display: flex;
+        flex-direction: column-reverse  ;    
+        height: 100dvh;
+        & h1{
+            text-align: center;
+        }
+        /* & img{
+        } */
+    }
+}
+
+@media (max-width:600px){
+
+
+    section.sobreNos-1{
+        img{
+            height: 250px;
+        }
+    }
+    .sobreNos-2{
+        background-position: center;
+        & img{
+            margin-top: -5px;
+        }
+        & .sobrenos-2-center{
+            div{
+                width: 90%;
+            }
+        }
+    }
+}
+@media (max-width:375px){
+    h1{
+        font-size: 30px;
+    }
+    section.sobreNos-1{
+        
+        & img{
+            height: 200px;
+        }
+    }
+   
+}
+/* #endregion */
