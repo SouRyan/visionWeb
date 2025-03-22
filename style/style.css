@@ -6,9 +6,11 @@
     border: 0;
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 @font-face {
     font-family: 'Stretch';
     src: url('../fonts/StretchPro.otf');
@@ -26,8 +28,9 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%); */
 }
 
 
-h2 {
+h2, span {
     font-family: 'Stretch';
+    color: #ffffff;
 
     i {
         color: #00A3FF;
@@ -38,14 +41,19 @@ h2 {
 .btn-contrate {
     background: var(--clr-primaria);
     color: var(--clr-branca);
-    width: 100px;
-    height: 50px;
+    width: 160px !important;
+    height: 55px !important;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 
+}
+
+.contrate-ja{
+    color: var(--clr-primaria);
+    background: var(--clr-branca);
 }
 
 h1 {
@@ -69,13 +77,14 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 1;
 
-    & a{
+    & a {
         img {
             height: 100px;
         }
 
-    } 
+    }
 
     & ul {
         display: flex;
@@ -85,14 +94,15 @@ header {
         font-family: 'Stretch';
         text-transform: uppercase;
 
-    
-            & li {
-                padding: 20px;
-                & a{
-                    color: white;
-                }
+
+        & li {
+            padding: 20px;
+
+            & a {
+                color: white;
             }
-        
+        }
+
     }
 }
 
@@ -150,7 +160,7 @@ section.banner {
 
         & .btn-contrate {
             height: 100px;
-            width: 250px;
+            width: 250px!important;
             display: flex;
             font-size: 20px;
             color: var(--clr-branca);
@@ -190,42 +200,60 @@ section.sobreNos-1 {
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
+
     img {
         height: 400px;
-        
+
     }
 
 }
+
 /* #endregion */
 /* #region Sobre nós2 */
 
-.sobreNos-2{
+.sobreNos-2 {
     height: 100dvh;
     background-image: url(../img/sobrenos-2.jpg);
     background-size: cover;
-    & img{
+
+    & img {
         position: absolute;
         color: var(--clr-branca);
         text-transform: uppercase;
         width: 100%;
         margin-top: -20px;
-    }    
-    
-    & .sobrenos-2-center{
-        background: rgb(23,102,147); background: linear-gradient(90deg, rgba(23,102,147,1) 0%, rgba(0,212,255,0) 100%);
+
+    }
+
+    & .sobrenos-2-center {
+        background: rgb(23, 102, 147);
+        background: linear-gradient(90deg, rgba(23, 102, 147, 1) 0%, rgba(0, 212, 255, 0) 100%);
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
-        & div{
-            width: 50%;
+
+        & div {
+            width: 40%;
             display: flex;
             flex-direction: column;
-            margin-left: 50px;
-            p{
+
+            margin-top: 7rem;
+
+            & ul {
+                & li {
+                    & h3 {
+                        font: 900;
+                        font-family: "Inter", sans-serif;
+                    }
+                }
+            }
+
+            p {
                 color: var(--clr-branca);
             }
-            .saibaMaisBanner{
+
+            .saibaMaisBanner {
                 background: var(--clr-primaria);
                 color: var(--clr-preta);
                 width: 200px;
@@ -238,21 +266,108 @@ section.sobreNos-1 {
                 border: 1px solid var(--clr-branca);
                 background: var(--clr-tranparent);
                 color: var(--clr-branca);
-                margin-left: 0px;
+                margin-left: 20px;
+                margin-top: 2.5rem;
             }
         }
-        
     }
 }
 
 /* #endregion */
+/*#region Servicos Cards */
 
-section.funcionarios{
+
+
+
+
+
+
+.funcionariosPainel{
+    background-color: var(--clr-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+.Cards{
+    display: flex;
+    gap: 1.5em;
+    margin-top: 3em;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.flip-card {
+    background-color: var(--clr-primaria);
+    width: 300px;
+    height: 400px;
+    
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    box-shadow: 5px 0 5px black;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    & h2{
+        color: var(--clr-preta);
+    }
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    /* box-shadow: -10px 0 10px black; */
+    transform: rotateY(180deg);
+    padding-top: 6.9rem;
+    
+}
+
+.texto-out{
+    background-color: var(--clr-primaria);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/*#endregion*/
+
+section.funcionarios {
     height: 100dvh;
     background: var(--clr-primaria);
 }
 
-section.servicos{
+section.servicos {
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -260,7 +375,8 @@ section.servicos{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    .partes{
+
+    .partes {
         flex-wrap: wrap;
         flex-direction: row;
         display: flex;
@@ -268,31 +384,37 @@ section.servicos{
         align-items: self-end;
         height: auto;
         width: 100%;
-        .card{
+
+        .card {
             box-shadow: 0 0 50px var(--clr-preta);
             border: 0px transparent;
             background: var(--clr-primaria);
             color: white;
-            .card-header{
+
+            .card-header {
                 border: 0px transparent;
                 background-color: transparent;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                .icon-servicos{
+
+                .icon-servicos {
                     height: 100px;
                 }
-                .card-title{
+
+                .card-title {
                     border: 0;
                     text-align: center;
                 }
             }
         }
-       
-    }
-}   
 
-    /* #region media */
+    }
+}
+
+/* #region media */
+
+
 @media (max-width:1024px) {
     header {
         /* justify-content: ; */
@@ -306,48 +428,69 @@ section.servicos{
         }
     }
 
-    section.sobreNos-1{
+    section.sobreNos-1 {
         display: flex;
-        flex-direction: column-reverse  ;    
+        flex-direction: column-reverse;
         height: 100dvh;
-        & h1{
+
+        & h1 {
             text-align: center;
         }
+
         /* & img{
         } */
     }
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 
 
-    section.sobreNos-1{
-        img{
+    section.sobreNos-1 {
+        img {
             height: 250px;
         }
     }
-    .sobreNos-2{
+
+    .sobreNos-2 {
         background-position: center;
-        & img{
+
+        & img {
             margin-top: -5px;
         }
-        & .sobrenos-2-center{
-            div{
+
+        & .sobrenos-2-center {
+            div {
                 width: 90%;
             }
         }
     }
 }
-@media (max-width:375px){
-    h1{
+
+@media (max-width:375px) {
+    h1 {
         font-size: 30px;
     }
-    section.sobreNos-1{
-        
-        & img{
+
+    section.sobreNos-1 {
+
+        & img {
             height: 200px;
         }
     }
-   
+
 }
+
 /* #endregion */
+
+.carouselExample{
+    & .carousel-inner{
+        .carousel-item .active{
+            background-color: red;
+            div{
+                background-color: red;
+                img{
+                }
+            }
+        }
+    }
+}
