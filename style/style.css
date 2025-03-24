@@ -24,7 +24,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%); */
     --clr-branca: white;
     --clr-preta: rgb(5, 5, 5);
     --clr-tranparent: transparent;
-    --btn-radius: 40px;
+    --btn-radius: 25px;
 }
 
 
@@ -42,19 +42,14 @@ h2, span {
     background: var(--clr-primaria);
     color: var(--clr-branca);
     width: 160px !important;
-    height: 55px !important;
-    border-radius: 10px;
+    height: 70px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: var(--btn-radius);
 
 }
 
-.contrate-ja{
-    color: var(--clr-primaria);
-    background: var(--clr-branca);
-}
 
 h1 {
     font-family: 'Stretch';
@@ -361,6 +356,9 @@ section.sobreNos-1 {
 
 /*#endregion*/
 
+/* #region  servicos */
+
+
 
 section.servicos {
     height: 100dvh;
@@ -406,6 +404,12 @@ section.servicos {
 
     }
 }
+
+
+
+/* #endregion */
+
+
 
 /* #region media */
 
