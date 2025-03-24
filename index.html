@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -25,15 +28,31 @@
 
 <body>
 
-    <header>
-        <a href="#banner"><img src="./img/Logo.png" alt="Logo"></a>
-        <ul>
-            <li><a href="#sobrenos">Sobre Nós</a></li>
-            <li><a href="#servicos">serviços</a> </li>
-            <li><a href="">PORTIFOLIO</a> </li>
-            <li> <a href=""> planos</a></li>
-        </ul>
-        <div class="btn-contrate">Contrate</div>
+    <header class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./img/Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobrenos">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
+                    </li>
+                    
+                </ul>
+                <li class="nav-item"><div class="d-flex btn-contrate">Contrate</div>
+              </li>
+            </div>
+        </div>
     </header>
 
     <nav>
@@ -116,20 +135,20 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./img/1.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="./img/pessoas/Ryan.png" alt="Avatar" style="width:300px;height:300px;">
                             <h2>Desing</h2>
                         </div>
                         <div class="flip-card-back">
-                            <h1>Vagner</h1>
+                            <h1>Ryan</h1>
                             <p>Architect & Engineer</p>
-                            <p>We love that guy</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./img/Ryan.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="./img/pessoas/ana.png" alt="Avatar" style="width:300px;height:300px;">
                             <h2>Back-end</h2>
                         </div>
                         <div class="flip-card-back">
@@ -142,7 +161,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./img/3.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="./img/pessoas/Kaique.png" alt="Avatar" style="width:300px;height:300px;">
                             <h2>Front-end</h2>
                         </div>
                         <div class="flip-card-back">
@@ -155,7 +174,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="./img/Kaique.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="./img/pessoas/vagner.png" alt="Avatar" style="width:300px;height:300px;">
                             <h2>SEO</h2>
                         </div>
                         <div class="flip-card-back">
@@ -173,30 +192,66 @@
         </section>
 
 
-        <div id="carouselExample" class="carousel slide">
+        <div id="planos" class="carousel slide"  data-bs-ride="carousel" >
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div>
-                    <img src="./img/icones/ladingPage.png"  alt="...">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, voluptas. Consequuntur totam tempore alias. Nihil, quae debitis corrupti officiis, reprehenderit voluptas illum autem quod impedit inventore minus asperiores, adipisci vel!</p>
+                <div class="carousel-item active" data-bs-interval="300">
+                    <div class="carousel-caption">
+                        <h2>Lading Page</h2>
+                        <p>Criamos landing pages otimizadas para conversões, com design atraente e foco em resultados.
+                            Ideal para campanhas, lançamentos de produtos e promoções, garantindo uma experiência única
+                            para os visitantes.</p>
+                    </div>
+                    <img src="./img/carroseul/ladingPage.png" class="d-block w-100" alt="...">
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="carousel-caption">
+                        <h2>Site Institucional</h2>
+                        <p>Desenvolvemos sites institucionais que comunicam de forma clara e profissional a identidade
+                            da sua empresa. Com design responsivo e conteúdo estratégico, garantimos que sua marca tenha
+                            presença online de impacto.</p>
+                    </div>
+                    <img src="./img/carroseul/instucional.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h2>E-commercie</h2>
+                        <p>Criamos lojas virtuais personalizadas, com soluções completas para vendas online. Desde o
+                            design até a integração de sistemas de pagamento, oferecemos tudo que sua loja precisa para
+                            prosperar no comércio eletrônico.</p>
+                    </div>
+                    <img src="./img/carroseul/e-commercie.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h2>hospedagem</h2>
+                        <p>Fornecemos hospedagem de sites com alta performance e segurança, garantindo que seu site
+                            esteja sempre no ar, rápido e acessível. Oferecemos suporte técnico especializado para que
+                            você não precise se preocupar com a infraestrutura.</p>
+                    </div>
+                    <img src="./img/carroseul/hospedagem.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h2>SEO</h2>
+                        <p>Aplicamos estratégias de SEO para aumentar a visibilidade do seu site nos motores de busca,
+                            gerando mais tráfego qualificado e melhorando o posicionamento online. Nosso trabalho ajuda
+                            sua empresa a alcançar mais clientes de forma orgânica.</p>
+                    </div>
+                    <img src="./img/carroseul/seo.png" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
+
 
 
         <!-- <section class="servicos panel" id="servicos">
