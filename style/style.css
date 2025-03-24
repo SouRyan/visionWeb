@@ -24,7 +24,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%); */
     --clr-branca: white;
     --clr-preta: rgb(5, 5, 5);
     --clr-tranparent: transparent;
-    --btn-radius: 25px;
+    --btn-radius:30px;
 }
 
 
@@ -42,14 +42,25 @@ h2, span {
     background: var(--clr-primaria);
     color: var(--clr-branca);
     width: 160px !important;
-    height: 70px !important;
+    height: 55px !important;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--btn-radius);
+    transition: .3s all;
+    &:hover{
+        transition: .3s all;
+        color: var(--clr-primaria);
+        background: var(--clr-branca);
+    }
 
 }
 
+.contrate-ja{
+    color: var(--clr-primaria);
+    background: var(--clr-branca);
+
+}
 
 h1 {
     font-family: 'Stretch';
@@ -93,6 +104,19 @@ header.navbar {
     }
     
 }
+.navbar-toggler{
+    border: 0px solid transparent;
+    &:active{
+        border: 0px solid transparent;
+
+    }
+}
+.bi-list{
+    color: white;
+    font-size: 50px;
+
+}
+
 
 /* #endregion */
 
@@ -115,6 +139,7 @@ video {
     height: 100%;
     width: 100%;
 }
+
 
 section.banner {
     color: var(--clr-branca);
@@ -141,14 +166,22 @@ section.banner {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            border: 1px solid gray;
+            border: 1px solid var(--clr-branca);
             background: var(--clr-tranparent);
             color: var(--clr-branca);
+            font-family: 'italiana';
+            transition: .3s all;
+
+            &:hover{
+                transition: .3s all;
+                background: var(--clr-branca);
+                color: var(--clr-preta);
+            }
         }
 
         & .btn-contrate {
-            height: 100px;
-            width: 250px!important;
+            height: 100px !important;
+            width: 250px !important;
             display: flex;
             font-size: 20px;
             color: var(--clr-branca);
@@ -157,9 +190,16 @@ section.banner {
             align-items: center;
             flex-direction: row;
             border-radius: var(--btn-radius);
+            transition: .3s all;
+            &:hover{
+                transition: .3s all;
+                color: var(--clr-primaria);
+                background: var(--clr-branca);
+            }
+        
         }
 
-        & ul.carrosel {
+        /* & ul.carrosel {
             display: flex;
             flex-direction: row;
             gap: 50px;
@@ -176,7 +216,7 @@ section.banner {
                 justify-content: center;
                 align-items: center;
             }
-        }
+        } */
     }
 }
 
@@ -239,7 +279,6 @@ section.sobreNos-1 {
                         font-style: normal;
                     }
                     p{
-                        font-family: "Italiana", sans-serif;
                         font-weight: 400;
                         font-style: normal;
                     }
@@ -265,6 +304,12 @@ section.sobreNos-1 {
                 color: var(--clr-branca);
                 margin-left: 20px;
                 margin-top: 2.5rem;
+                transition: .3s all;
+                &:hover{
+                    transition: .3s all;
+                    background: var(--clr-branca);
+                    color: var(--clr-primaria);
+                }
             }
         }
     }
@@ -349,11 +394,17 @@ section.sobreNos-1 {
 }
 
 .texto-out{
-    background-color: var(--clr-primaria);
     text-align: center;
     margin-top: 2rem;
+    
 }
-
+.contrate-ja{
+    font: 900;
+    &:hover{
+        background: var(--clr-preta);
+        color: var(--clr-branca);
+    }
+}
 /*#endregion*/
 
 /* #region  servicos */
@@ -408,6 +459,8 @@ section.servicos {
 
 
 /* #endregion */
+
+
 
 
 
@@ -505,6 +558,10 @@ section.servicos {
 
 @media (max-width:600px) {
 
+    h2{
+        margin-top: -50px;
+        font-size: 95%;
+    }
 
     section.sobreNos-1 {
         img {
@@ -531,6 +588,7 @@ section.servicos {
     h1 {
         font-size: 30px;
     }
+ 
 
     section.sobreNos-1 {
 
