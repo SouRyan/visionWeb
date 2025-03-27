@@ -10,7 +10,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <!-- Splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,26 +50,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#sobrenos">Sobre Nós</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#planos">Planos</a>
+                        <a class="nav-link" href="#portifolio">Portifolio</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            Serviços
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#servicos">Serviços</a></li>
+                            <li><a class="dropdown-item" href="#planos">Planos</a></li>
                         </ul>
                     </li>
                 </ul>
                 <li class="nav-item">
-                    <div class="d-flex btn-contrate">Contrate</div>
+                    <a href="Second-Page/agenda.html">
+                        <div class="d-flex btn-contrate" style="margin-left: 10px;">Contrate</div>
+                    </a>
                 </li>
             </div>
         </div>
@@ -76,28 +76,23 @@
 
     <nav>
         <section class="banner" id="banner">
-            <video src="./videos/background-video.mp4" autoplay loop></video>
+            <video src="video/background-video.mp4" autoplay loop></video>
             <div id="background-degrade"></div>
             <div>
 
                 <div>
-                    <h1>VISION WEB</h1>
-                    <h2> Para sua <span id="element"></span></h2>
+                    <h1>VISIOON WEEB</h1>
+                    <h2> Para <span id="element"></span></h2>
                 </div>
 
-
-                <div class="btn-contrate">
-                    <b>Contrate Já</b>
-                </div>
-                <div class="saibaMaisBanner">Saiba Mais <i class="bi bi-arrow-down-short"></i></div>
-                <!-- <ul class="carrosel">
-                        <li class="itensExemplo">Lading Pages</li>
-                        <li class="itensExemplo">Lading Pages</li>
-                        <li class="itensExemplo">Lading Pages</li>
-                        <li class="itensExemplo">Lading Pages</li>
-                        <li class="itensExemplo">Lading Pages</li>
-                        <li class="itensExemplo">Lading Pages</li>
-                </ul> -->
+                <a href="./Second-Page/agenda.html">
+                    <div class="btn-contrate">
+                        <b>Contrate Já</b>
+                    </div>
+                </a>
+                <a href="#sobrenos">
+                    <div class="saibaMaisBanner">Saiba Mais <i class="bi bi-arrow-down-short"></i></div>
+                </a>
 
             </div>
         </section>
@@ -114,7 +109,7 @@
                     o sucesso no mundo conectado e estamos aqui para tornar isso possível.</p>
             </div>
             <div class="direita-SobreNos">
-                <img src="./img-will-proj/serviços/ecommerce/e-cormmerce.webp" alt="">
+                <img src="./img/carroseul/hospedagem.png" alt="">
             </div>
         </section>
 
@@ -159,7 +154,8 @@
                         </div>
                         <div class="flip-card-back">
                             <h1>Ryan</h1>
-                            <p>Architect & Engineer</p>
+                            <p>Ryan é um programador back-end experiente, especializado em construir sistemas robustos e
+                                eficientes que operam nos bastidores das aplicações. </p>
 
                         </div>
                     </div>
@@ -171,9 +167,9 @@
                             <h2>Back-end</h2>
                         </div>
                         <div class="flip-card-back">
-                            <h1>Ryan</h1>
-                            <p>Architect & Engineer</p>
-                            <p>We love that guy</p>
+                            <h1>Ana Beatriz</h1>
+                            <p>Ana é uma especialista em Design com um olhar criativo e detalhista, capaz de transformar
+                                ideias em projetos visuais impactantes e funcionais..</p>
                         </div>
                     </div>
                 </div>
@@ -184,9 +180,10 @@
                             <h2>Front-end</h2>
                         </div>
                         <div class="flip-card-back">
-                            <h1>Ana</h1>
-                            <p>Architect & Engineer</p>
-                            <p>We love that guy</p>
+                            <h1>Kaique</h1>
+                            <p>Kaique é um talentoso programador front-end, apaixonado por transformar ideias em
+                                experiências digitais incríveis. Com uma habilidade excepcional em HTML, CSS e
+                                JavaScript.</p>
                         </div>
                     </div>
                 </div>
@@ -197,9 +194,9 @@
                             <h2>SEO</h2>
                         </div>
                         <div class="flip-card-back">
-                            <h1>Kaique</h1>
-                            <p>Architect & Engineer</p>
-                            <p>We love that guy</p>
+                            <h1>Vagner</h1>
+                            <p>Vagner é um especialista em SEO com uma habilidade aguçada para otimizar websites e
+                                melhorar seu posicionamento nos motores de busca.</p>
                         </div>
                     </div>
                 </div>
@@ -210,9 +207,8 @@
             <div class="btn-contrate contrate-ja">Contrate</div>
         </section>
 
-
         <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner" id="servicos">
                 <div class="carousel-item active" data-bs-interval="1000">
                     <div class="carousel-caption">
                         <h2>Lading Page</h2>
@@ -220,7 +216,9 @@
                             Ideal para campanhas, lançamentos de produtos e promoções, garantindo uma experiência única
                             para os visitantes.</p>
                     </div>
-                    <img src="./img/carroseul/ladingPage.png" class="d-block w-100" alt="...">
+                    <img src="./img/carroseul/lading-mobile.png" class="w-100 img-fluid d-block d-md-none" alt="..." />
+                    <img src="./img/carroseul/ladingPage.png" class="w-100 img-fluid d-none d-md-block"
+                        alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="1000">
                     <div class="carousel-caption">
@@ -229,7 +227,9 @@
                             da sua empresa. Com design responsivo e conteúdo estratégico, garantimos que sua marca tenha
                             presença online de impacto.</p>
                     </div>
-                    <img src="./img/carroseul/instucional.png" class="d-block w-100" alt="...">
+                    <img src="./img/carroseul/institucional-mobile.png" class="w-100 img-fluid d-block d-md-none" alt="..." />
+                    <img src="./img/carroseul/instucional.png" class="w-100 img-fluid d-none d-md-block"
+                        alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="1000">
                     <div class="carousel-caption">
@@ -238,7 +238,9 @@
                             design até a integração de sistemas de pagamento, oferecemos tudo que sua loja precisa para
                             prosperar no comércio eletrônico.</p>
                     </div>
-                    <img src="./img/carroseul/e-commercie.png" class="d-block w-100" alt="...">
+                    <img src="./img/carroseul/ecommerce-mobile.png" class="w-100 img-fluid d-block d-md-none" alt="..." />
+                    <img src="./img/carroseul/e-commercie.png" class="w-100 img-fluid d-none d-md-block"
+                        alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="1000">
                     <div class="carousel-caption">
@@ -247,7 +249,9 @@
                             esteja sempre no ar, rápido e acessível. Oferecemos suporte técnico especializado para que
                             você não precise se preocupar com a infraestrutura.</p>
                     </div>
-                    <img src="./img/carroseul/hospedagem.png" class="d-block w-100" alt="...">
+                    <img src="./img/carroseul/hospedagem-mobile.png class="w-100 img-fluid d-block d-md-none" alt="..." />
+                    <img src="./img/carroseul/hospedagem.png" class="w-100 img-fluid d-none d-md-block"
+                        alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="1000">
                     <div class="carousel-caption">
@@ -256,7 +260,9 @@
                             gerando mais tráfego qualificado e melhorando o posicionamento online. Nosso trabalho ajuda
                             sua empresa a alcançar mais clientes de forma orgânica.</p>
                     </div>
-                    <img src="./img/carroseul/seo.png" class="d-block w-100" alt="...">
+                    <img src="./img/carroseul/seo-mobile.png" class="w-100 img-fluid d-block d-md-none" alt="..." />
+                    <img src="./img/carroseul/seo.png" class="w-100 img-fluid d-none d-md-block"
+                        alt="..." />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -271,21 +277,87 @@
             </button>
         </div>
 
+        <section class="planos" id="planos">
 
-        <div class="swiper mySwiper">
-            <!-- <h2 style="color: black;">Portifolio</h2> -->
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
+
+            <div class="itemPlanos">
+                <div class="topPlanos">
+                    <h4>Vision Basic</h4>
+                </div>
+                <ul>
+                    <li>Ladings Pages</li>
+                    <li>Sites Institucionais</li>
+                    <li>Blogs Personalizados</li>
+                    <li>Lojas virtuais (E-commerce)</li>
+                </ul>
             </div>
-        </div>
+            <div class="itemPlanos">
+                <div class="topPlanos">
+                    <h4>Vision Lite</h4>
+                </div>
+                <ul>
+                    <li>Ladings Pages</li>
+                    <li>Sites Institucionais</li>
+                    <li>Blogs Personalizados</li>
+                    <li>Lojas virtuais (E-commerce)</li>
+                    <li>Hospedagem Grátis por 1 Ano</li>
+                    <li>Suporte Técnico</li>
+                </ul>
+            </div>
+            <div class="itemPlanos">
+                <div class="topPlanos">
+                    <h4>Vision Max</h4>
+                </div>
+                <ul>
+                    <li><b> Tudo o que os outros planos oferecem...</b></li>
+                    <li>Hospedagem Grátis por 3 Anos</li>
+                    <li>Suporte Técnico</li>
+                    <li>Gerenciamento de banco de dados</li>
+                    <li>Otimização para mecanismo de Buscas</li>
+                    <li><b>E muito mais!</b></li>
+
+                </ul>
+            </div>
 
 
 
+        </section>
+        <a href="./planos/planos.html">
+
+            <div class="container btn-plano">
+                <b>Assine Já</b>
+            </div>
+        </a>
+
+        <section class="portifolio" id="portifolio">
+
+            <h1><span>Portifolio</span></h1>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-01.png" alt="Slide 1">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-02.png" alt="Slide 2">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-03.png" alt="Slide 3">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-04.png" alt="Slide 4">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-05.png" alt="Slide 5">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/portifolio/portifolio-06.png" alt="Slide 6">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
 
         <section class="contato">
 
@@ -345,7 +417,7 @@
         <!-- Copyright -->
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>

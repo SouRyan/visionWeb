@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- meu CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- favIcon -->
+
+    <link rel="shortcut icon" href="./IMG/logo.png" />
+    <title> Agendamento </title>
+</head>
+
+<body>
+
+
+        <header>
+            <a href="../index.html">
+                <div class="logo"> <img src="../img/Logo.png" alt="logo"> </div>
+            </a>
+            <h2>
+                VOCÊ ESTÁ UM PASSO MAIS PERTO DO SEU <span> SITE! </span> <br>
+                AGENDE AGORA A <span> REUNIÃO </span> INICIAL 💻
+            </h2>
+        </header>
+
+    <div class="infos">
+        <form>
+            <input type="text" name="nome" id="nome" placeholder="NOME">
+            <br>
+            <input type="email" name="email" id="email" placeholder="E-MAIL">
+            <label for="servicos"> TIPO DE SERVIÇO </label>
+            <select id="servicos" name="servicos">
+                <option value="landPage"> LANDING PAGE </option>
+                <option value="hospe"> HOSPEDAGEM </option>
+                <option value="manut"> MANUTENÇÃO </option>
+                <option value="insti"> SITE INSTITUCIONAL </option>
+                <option value="ecommerce"> E-COMMERCE </option>
+                <option value="seo"> SEO </option>
+            </select>
+            <br>
+            <label for="price"> QUANTO PRETENDE INVESTIR NO SEU PROJETO? </label>
+            <input type="range" name="price" id="price" min="2000" max="500000" step="500" value="10000" />
+            <output class="price-output" for="price"> </output> <br>
+            <label for="data"> DATA DESEJADA PARA A REUNIÃO </label>
+            <input type="date" name="data" id="data" placeholder="DATA/MÊS/ANO">
+            <br> <br>
+            <label for="detalhes"> INFORMAÇÕES ADICIONAIS </label>
+            <input type="text" name="detalhes" id="detalhes" placeholder="MAIS DETALHES">
+            <br> <br>
+            <button class="btn-com-icone" onclick="alerta()">
+                <p>AGENDAR</p>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </form>
+
+    </div>
+
+
+
+
+    <!-- meu Script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

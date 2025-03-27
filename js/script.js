@@ -1,23 +1,31 @@
-
+  
 var typed = new Typed('#element', {
-  strings: ['<i>Sua Empressa</i>', '<i>Seu Negócio</i>', '<i>Seu Projeto</i>', '<i>Sua Presença Online</i>', '<i>Seu Sucesso</i>', '<i>Para VOCÊ!</i>'],
+  strings: ['<i>Sua Empresa</i>', '<i>Seu Negócio</i>', '<i>Seu Projeto</i>', '<i>Sua Presença Online</i>', '<i>Seu Sucesso</i>', '<i>Para VOCÊ!</i>','<i> Criação de Site</i>'],
   typeSpeed: 50,
   backSpeed: 60,
   loop: true
 });
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  loop: true,
-  // loopAdditionalSlides: 1,  // Isso cria um slide adicional para garantir a transição suave
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+document.addEventListener('DOMContentLoaded', function () {
+  var splide = new Splide('.splide', {
+    type: 'loop',    // Infinite looping
+    perPage: 3,      // Show 3 slides at once
+    perMove: 1,     // Move 1 slide at a time
+    gap: '1rem',
+    autoplay: true,          // Habilita o autoplay
+    interval: 2000,          // Tempo em milissegundos (3 segundos)
+    pauseOnHover: true,      // Pausa ao passar o mouse
+    pauseOnFocus: true,      // Pausa ao focar (útil para acessibilidade)
+    resetProgress: false,    // Não reinicia o progresso ao mudar de slide
+    // Space between slides
+    breakpoints: {   // Responsive settings
+      1024: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 1,
+      }
+    }
+  });
+  splide.mount();
 });
-

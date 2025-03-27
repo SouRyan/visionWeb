@@ -1,0 +1,262 @@
+/*#region global*/
+
+@font-face {
+    font-family:'Stretch';
+    src: url(../fonts/StretchPro.otf);
+} 
+
+body {
+    overflow-x: hidden;
+    font-family: "Italiana", sans-serif;
+    font: 600;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-attachment: fixed;
+    background-image: url(../img/carroseul/ladingPage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+
+  label,
+  output {
+    display: block;
+  }
+
+/*#endregion*/
+
+
+
+/*#region header*/
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 33vh;
+    img{
+        width: 150px;
+        height: 150px;
+        transition: all .3s;
+        &:hover{
+            opacity: 0.5;
+            transition: all .3s;
+        }
+    }
+
+    h2{
+        color: white;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            /* color: white; */
+            transform: scale(1.03);
+        }       
+        & span{
+            color: #00A3FF;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+/*#endregion*/
+
+
+
+
+
+/*#region form*/
+
+form{
+    font-family: 'Stretch';
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    color: white;
+    padding: 20px;
+    height: 95vh;
+    /* justify-content: center; */
+    & input{
+        margin-top: 25px;
+    }
+
+    & #nome, #email, #data, #detalhes, #servicos{
+        font-family: 'Stretch';
+
+        margin: 15px;
+        width: 50%;
+        height: 45px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+            border: 1px solid #00A3FF;
+        }
+        }
+
+    & .btn-com-icone{
+
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: none;
+        font-size: 20px;
+        justify-content: space-between;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        background: #00A3FF;
+        position: relative;
+        overflow: hidden;
+        height: 40px;
+        width: 250px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        transition: all 3.s;
+        &:hover{
+            transform: scale(1.1);
+        }
+
+    }
+
+    & .btn-com-icone > i{
+        font-size: 22px;
+        color: #ffffff;
+        position: block;
+    }
+
+}
+
+/*#endregion*/
+
+
+
+
+
+/*#region media*/
+
+@media (max-width: 768px) {
+    header {
+        height: 25vh;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        height: auto;
+        padding: 15px;
+    }
+
+    form, #nome, #email, #data, #detalhes, #servicos {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    /* form .btn-com-icone {
+        width: 100%;
+        font-size: 18px;
+    } */
+
+    form .btn-com-icone i {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 30vh;
+        width: 95%;
+        margin-right: 10px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    form #nome, #email, #data, #detalhes, #servicos {
+        width: 280px;
+    }
+    form #email{
+        width: 280px;
+    }
+    form #data{
+        width: 280px;
+    }
+    form #detalhes{
+        width: 280px;
+    }
+    form #servicos{
+        width: 280px;
+    }
+
+    form .btn-com-icone {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    form .btn-com-icone i {
+        margin-left: 190px;
+    }
+}
+@media (max-width: 412px) {
+    header {
+        height: 30vh;
+        width: 100%;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+    form{
+        margin-left: -20px
+    }
+    form #nome, #email, #data, #detalhes, #servicos {
+        width: 280px;
+    }
+    form #email{
+        width: 280px;
+    }
+    form #data{
+        width: 280px;
+    }
+    form #detalhes{
+        width: 280px;
+    }
+    form #servicos{
+        width: 280px;
+    }
+
+    form .btn-com-icone {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    form .btn-com-icone i {
+        margin-left: 150px;
+    }
+}
+
+
+/*#endregion*/
+
