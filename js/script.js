@@ -1,4 +1,10 @@
+window.addEventListener("load", ()=> {
+  let video = window.document.querySelector("#video")
+  video.play()
+  video.loop = true
   
+  });
+   
 var typed = new Typed('#element', {
   strings: ['<i>Sua Empresa</i>', '<i>Seu Negócio</i>', '<i>Seu Projeto</i>', '<i>Sua Presença Online</i>', '<i>Seu Sucesso</i>', '<i>Para VOCÊ!</i>','<i> Criação de Site</i>'],
   typeSpeed: 50,
@@ -29,9 +35,3 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   splide.mount();
 });
-window.addEventListener("load", ()=> {
-  let video = window.document.querySelector("#video")
-  video.play()
-  video.loop = true
-  
-  });
