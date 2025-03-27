@@ -911,8 +911,9 @@ section.servicos {
 
     section.sobreNos-1 {
 
+        margin-bottom: 50px;
         & img {
-            margin-top: 300px;
+            margin-top:200px;
             height: 170px;
         }
     }
