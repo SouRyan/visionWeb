@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   splide.mount();
 });
+window.addEventListener("load", ()=> {
+  let video = window.document.querySelector("#video")
+  video.play()
+  video.loop = true
+  
+  });
